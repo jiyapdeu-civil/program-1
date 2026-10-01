@@ -1,36 +1,48 @@
 #include<stdio.h>
 #include<conio.h>
+#include<math.h>
 void main()
 {
-  int a[2][2] , b[2][2], c[2][2];
-  int i,j;
+  int n,d;
+  char isprime = 'y';
   clrscr();
-  printf ("Enter a values of array Aof size 2x2:");
-  for (i=0; i<2; i++);
-     for ( j=0; j<2; j++);
-	 scanf ("%d",&a[i][j]);
-  printf ("Enter a values of array B of size 2x2:");
-  for (i=0; i<2; i++);
-    for  ( j=0; j<2; j++);
-	 scanf ("%d",&b[i][j]);
+  printf("Enter a no.:");
+  scanf ("%d",&n);
+  if (n == 1)
+     printf("It's neither prime nor composite no.");
+    else
 
-   printf("Array A:\n");
-   for (i=0; i<2;i++)
-  {
-  for (j=0; j<2; j++)
-     printf ("%d", b[i][j]);
-   printf ("\n");
-}
+       if(n == 2)
+	printf (" it's a prime no.");
+       else
+   if (n % 2 == 0)
+     printf(" it's not a prime no.:");
+     else
+     {
+	for(d = 3; d <=  sqrt(n); d += 2)
 
-   printf("Array c:\n");
-   for (i=0; i<2;i++)
-  {
-  for (j=0; j<2; j++)
-  {
-  c[i][j] = a[i][j] + b[i][j];
-     printf ("%d", c[i][j]);
-   printf ("\n");
-}
-    getch ();
+	if( n % d == 0)
+       {
+	 isprime = 'n' ;
+	 break;
+	};
+     if (is prime == 'y')
+     printf (" it's a prime no.:");
+   else
+     printf (" it's not a prime no.:");
+
+   }
+     getch();
+
  }
- }
+
+
+
+
+
+
+
+
+
+
+
